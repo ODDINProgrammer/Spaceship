@@ -55,6 +55,8 @@ public class SpaceshipController : MonoBehaviour
         {
             Instantiate(_bullet, _shootPoint.position, Quaternion.identity);
 
+            AudioManager.Instance.PlaySound(AudioManager.Instance._BlasterSFX, 0.5f);
+
             _shootingTimer = 0;
         }
     }

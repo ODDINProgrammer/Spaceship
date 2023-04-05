@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 5
+  _selfDestroyTimer: 10
   _maxSpeed: 8
   _maxScaleMultiplier: 3
   _objectType: 2
