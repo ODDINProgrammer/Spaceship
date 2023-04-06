@@ -77,10 +77,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101450602563405687}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2025701887
 MonoBehaviour:
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd540e65c2dd90d4f8378e98e9939c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 10
 --- !u!114 &-2939256160673900735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   _damage: 3
   _bullet: {fileID: 4463354298003232008, guid: decf8413fa965f040a3647774278ecd5, type: 3}
   _shootPoint: {fileID: 2133435003}
-  _shootingInterval: 0.3
+  _shootingInterval: 0.5
 --- !u!1 &5601480506568409509
 GameObject:
   m_ObjectHideFlags: 0

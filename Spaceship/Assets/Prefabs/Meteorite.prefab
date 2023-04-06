@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6760873438139172666}
   - component: {fileID: 7393702977667258489}
   - component: {fileID: -6395917488780159474}
-  - component: {fileID: 866843043970422929}
   - component: {fileID: 4600601670702159110}
   - component: {fileID: -2643227078998595813}
   - component: {fileID: 7699249180731063206}
@@ -22,7 +21,7 @@ GameObject:
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5349641772352244881
 Transform:
@@ -96,19 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxSpeed: 8
---- !u!114 &866843043970422929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180578245370334092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f65a29af456b56b479d5c71f774d7e7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _selfDestroyTimer: 30
 --- !u!114 &4600601670702159110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +154,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3355415549777614061
 Transform:
