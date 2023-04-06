@@ -33,4 +33,5 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(_seconds);
         Destroy(gameObject);
     }
+
 }

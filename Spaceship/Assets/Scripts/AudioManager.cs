@@ -22,4 +22,5 @@ public class AudioManager : MonoBehaviour
     {
         _source.PlayOneShot(_clip, _volumeScale);
     }
+
 }

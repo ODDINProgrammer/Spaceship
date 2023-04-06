@@ -75,6 +75,9 @@ public class CosmicObjectBase : MonoBehaviour
         if(_currentHealth <= 0)
         {
             AudioManager.Instance.PlaySound(AudioManager.Instance._ExplosionSFX, 1f);
+
+            ParticlesManager.Instance.RenderParticle(ParticlesManager.Instance.meteoriteExplosion, transform.position);
+
             Destroy(this.gameObject);
         }
     }
@@ -84,4 +87,5 @@ public class CosmicObjectBase : MonoBehaviour
     {
         transform.Translate(Vector3.left * _speed * Time.deltaTime);
     }
+
 }

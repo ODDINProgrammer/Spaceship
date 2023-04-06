@@ -36,6 +36,12 @@ public class SpaceshipController : MonoBehaviour
         CheckInput();
     }
 
+    private void OnDestroy()
+    {
+        AudioManager.Instance.PlaySound(AudioManager.Instance._ExplosionSFX, 1f);
+        ParticlesManager.Instance.RenderParticle(ParticlesManager.Instance.explosion, transform.position);
+    }
+
     private void CheckInput()
     {
         // Move up.
@@ -60,4 +66,5 @@ public class SpaceshipController : MonoBehaviour
             _shootingTimer = 0;
         }
     }
+
 }
