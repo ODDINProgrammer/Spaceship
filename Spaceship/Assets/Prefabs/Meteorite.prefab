@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 866843043970422929}
   - component: {fileID: 4600601670702159110}
   - component: {fileID: -2643227078998595813}
+  - component: {fileID: 7699249180731063206}
   m_Layer: 0
   m_Name: Meteorite
   m_TagString: Enemy
@@ -133,6 +134,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxScaleMultiplier: 4
+--- !u!114 &7699249180731063206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180578245370334092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ceeacf6d6597e4dae4738b2bf210fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 7425150561891968619}
+  _meshes:
+  - {fileID: -3272999745152833947, guid: 4479dd4d5e0b0404f8d157b0b94890f8, type: 3}
+  - {fileID: 3232668135694554482, guid: 99732e9014e8f13408d04af33102168d, type: 3}
+  - {fileID: -9117854076666014425, guid: a3fc715179294374e9b3b3df65b771ea, type: 3}
 --- !u!1 &2485280912590010426
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +162,7 @@ GameObject:
   - component: {fileID: 3355415549777614061}
   - component: {fileID: 7425150561891968619}
   - component: {fileID: 2720533640132020423}
-  - component: {fileID: 4566091480268788284}
+  - component: {fileID: 283853185654881335}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -174,7 +192,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2485280912590010426}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -3272999745152833947, guid: 4479dd4d5e0b0404f8d157b0b94890f8, type: 3}
 --- !u!23 &2720533640132020423
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -217,16 +235,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4566091480268788284
-SphereCollider:
+--- !u!95 &283853185654881335
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2485280912590010426}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 292bbb1e2a928c34388e0fabcfa3f8ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

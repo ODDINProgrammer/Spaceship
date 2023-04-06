@@ -7,9 +7,6 @@ public class Bullet : MonoBehaviour
     [Header("Bullet settings")]
     [SerializeField] private float _speed;
 
-    [Tooltip("Enter a number in seconds after which the game object will selfdestroy.")]
-    [SerializeField] private float _selfDestroyTimer;
-
     private void Update()
     {
         MoveBullet();

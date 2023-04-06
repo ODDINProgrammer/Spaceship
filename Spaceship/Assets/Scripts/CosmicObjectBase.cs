@@ -12,18 +12,5 @@ public class CosmicObjectBase : MonoBehaviour
         set { _health = value; }
     }
 
-    //[Header("Scale settings.")]
-    //[SerializeField] private int _maxScaleMultiplier;
-
-    //private void OnEnable()
-    //{
-    //    // Change size for variaty.
-    //    int scaleMultiplier = Random.Range(1, _maxScaleMultiplier);
-    //    transform.localScale *= scaleMultiplier;
-
-    //    _currentHealth = _health;
-    //}
-
-
-    //}
+    
 }
