@@ -9,9 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5349641772352244881}
-  - component: {fileID: 1830689091791340032}
   - component: {fileID: 5111743681240555738}
   - component: {fileID: 6760873438139172666}
+  - component: {fileID: 7393702977667258489}
+  - component: {fileID: -6395917488780159474}
+  - component: {fileID: 866843043970422929}
+  - component: {fileID: 4600601670702159110}
+  - component: {fileID: -2643227078998595813}
   m_Layer: 0
   m_Name: Meteorite
   m_TagString: Enemy
@@ -35,23 +39,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1830689091791340032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180578245370334092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8ff6baf6e3a11b42921452eb1634790, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 5
-  _selfDestroyTimer: 10
-  _maxSpeed: 8
-  _maxScaleMultiplier: 3
-  _objectType: 2
 --- !u!54 &5111743681240555738
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81,6 +68,71 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7393702977667258489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180578245370334092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41ce6a63b9825042af51a03cd381154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 6
+  _collisionController: {fileID: 4600601670702159110}
+--- !u!114 &-6395917488780159474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180578245370334092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8290fef2513caee419151fc7db7fcc9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxSpeed: 8
+--- !u!114 &866843043970422929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180578245370334092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65a29af456b56b479d5c71f774d7e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selfDestroyTimer: 30
+--- !u!114 &4600601670702159110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180578245370334092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba70791f5874d824d9f367a07825d1f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2643227078998595813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180578245370334092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91eccdf9d1a35c242a13d70f2fef2da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxScaleMultiplier: 4
 --- !u!1 &2485280912590010426
 GameObject:
   m_ObjectHideFlags: 0
