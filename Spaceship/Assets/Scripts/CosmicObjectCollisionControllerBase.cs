@@ -9,7 +9,7 @@ public abstract class CosmicObjectCollisionControllerBase : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Player":
-                Destroy(other.gameObject);
+                GlobalEvents._onPlayerDeath.Invoke();
                 break;
 
             case "Bullet":

@@ -11,14 +11,17 @@ public class SpaceshipController : MonoBehaviour
     [Header("Accessors")]
     public SpaceshipShooting _shootingController;
 
+    [Header("Death Logic")]
     [SerializeField] private UnityEvent _onPlayerDeath;
 
     private void Awake()
     {
         Instance = this;
+
+        GlobalEvents._onPlayerDeath.AddListener(Die);
     }
 
-    private void OnDestroy()
+    private void Die()
     {
         _onPlayerDeath.Invoke();
         AudioManager.Instance.PlaySound(AudioManager.Instance._ExplosionSFX, 1f);

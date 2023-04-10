@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance;
+    public static AudioManager Instance { get; private set; }
 
     [Header("Audio clips.")]
     public AudioClip _BlasterSFX;
@@ -15,7 +15,14 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            return;
+        }
+
+        Destroy(this.gameObject);
     }
 
     public void PlaySound(AudioClip _clip, float _volumeScale)
