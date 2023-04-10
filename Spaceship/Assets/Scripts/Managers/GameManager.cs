@@ -7,11 +7,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public float Distance { get { return _distance; } }
+    public float Distance { set { _distance = value; } get { return _distance; } }
+   
     public bool IsGameOver { get { return _isGameOver; } }
+    public bool GameStarted { get { return _gameStarted; } }
 
     private float _distance;
+
     private static bool _isGameOver;
+    private static bool _gameStarted;
 
     private void Awake()
     {
@@ -28,16 +32,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _isGameOver = false;
-    }
-
-    private void Update()
-    {
-        RecordDistance();
-    }
-
-    private void RecordDistance()
-    {
-        _distance += Time.deltaTime;
+        _gameStarted = false;
+        _distance = 0f;
     }
 
     public void ChangePauseState(bool _isPaused)
@@ -51,9 +47,13 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }   
     
+    public void StartGame(bool _flag)
+    {
+        _gameStarted = _flag;
+    }    
+
     public void GameOver()
     {
-        print("Called Game over!");
         _isGameOver = true; 
     }
 }
