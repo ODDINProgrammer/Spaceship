@@ -15,6 +15,7 @@ public class GameManagerInputReader : MonoBehaviour
 
     private void ReadInput()
     {
+        print("Pressing space");
         if(Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

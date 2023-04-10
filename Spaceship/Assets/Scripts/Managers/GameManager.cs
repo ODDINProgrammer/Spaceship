@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public bool IsGameOver { get { return _isGameOver; } }
 
     private float _distance;
-    private bool _isGameOver = false;
+    private static bool _isGameOver;
 
     private void Awake()
     {
@@ -20,9 +20,14 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
             return;
-        }
 
-       Destroy(this.gameObject);
+        }
+        Destroy(this.gameObject);
+    }
+
+    private void Start()
+    {
+        _isGameOver = false;
     }
 
     private void Update()
@@ -46,8 +51,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }   
     
-    public void GameOver(bool _flag)
+    public void GameOver()
     {
-        _isGameOver = _flag;
+        print("Called Game over!");
+        _isGameOver = true; 
     }
 }
