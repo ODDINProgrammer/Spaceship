@@ -18,7 +18,7 @@ public class SpaceshipController : MonoBehaviour
     {
         Instance = this;
 
-        GlobalEvents._onPlayerDeath.AddListener(Die);
+        GlobalEvents._OnPlayerDeath.AddListener(Die);
     }
 
     private void Die()

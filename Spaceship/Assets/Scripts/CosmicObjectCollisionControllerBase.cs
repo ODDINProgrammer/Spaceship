@@ -9,7 +9,7 @@ public abstract class CosmicObjectCollisionControllerBase : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Player":
-                GlobalEvents._onPlayerDeath.Invoke();
+                GlobalEvents._OnPlayerDeath.Invoke();
                 break;
 
             case "Bullet":

@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
 
     private float _distance;
 
-    private static bool _isGameOver;
-    private static bool _gameStarted;
+    private static bool _isGameOver = false;
+    private static bool _gameStarted = false;
 
     private void Awake()
     {
@@ -29,10 +29,10 @@ public class GameManager : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void Start()
+    public void RestartGame()
     {
         _isGameOver = false;
-        _gameStarted = false;
+        _gameStarted = true;
         _distance = 0f;
     }
 
@@ -50,10 +50,10 @@ public class GameManager : MonoBehaviour
     public void StartGame(bool _flag)
     {
         _gameStarted = _flag;
-    }    
+    }
 
     public void GameOver()
     {
-        _isGameOver = true; 
+        _isGameOver = true;
     }
 }

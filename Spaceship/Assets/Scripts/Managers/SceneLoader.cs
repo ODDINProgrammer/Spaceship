@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,8 +12,8 @@ public class SceneLoader : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void LoadScene(Object _scene)
+    public void LoadScene(string _name)
     {
-        SceneManager.LoadScene(_scene.name);
+        SceneManager.LoadScene(_name);
     }
 }
