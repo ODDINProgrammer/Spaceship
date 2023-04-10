@@ -1,14 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public float Distance { get { return _distance; } }
+    public bool IsGameOver { get { return _isGameOver; } }
+
+    private float _distance;
+    private bool _isGameOver = false;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Update()
+    {
+        RecordDistance();
+    }
+
+    private void RecordDistance()
+    {
+        _distance += Time.deltaTime;
     }
 
     public void ChangePauseState(bool _isPaused)
@@ -20,5 +37,10 @@ public class GameManager : MonoBehaviour
         }
         
         Time.timeScale = 1f;
-    }    
+    }   
+    
+    public void GameOver(bool _flag)
+    {
+        _isGameOver = _flag;
+    }
 }
