@@ -1537,14 +1537,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1550694584}
-    - target: {fileID: 6717669882651005179, guid: 11f6a0b0c19be4942a1e166d30d6abc3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 6717669882651005179, guid: 11f6a0b0c19be4942a1e166d30d6abc3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f6a0b0c19be4942a1e166d30d6abc3, type: 3}
 --- !u!114 &1271895257 stripped
